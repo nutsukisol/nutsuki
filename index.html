@@ -16,20 +16,25 @@
     }
 
     .background {
-      background-attachment: fixed;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('assets/background.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
+  background-position: center 0;
+  animation: subtleMove 20s infinite alternate ease-in-out;
+}
 
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background-image: url("assets/background.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: brightness(0.7) contrast(1.2) saturate(1.3);
-    }
+@keyframes subtleMove {
+  from {
+    background-position-y: 0;
+  }
+  to {
+    background-position-y: 40px;
+  }
+}
+
 
     .neon-overlay {
       position: fixed;
