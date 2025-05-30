@@ -17,13 +17,18 @@
     }
 
     .background {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: url('assets/fondowep.png');
-      background-attachment: fixed;
-      background-position: center 0;
-      animation: subtleMove 20s infinite alternate ease-in-out;
+      height: 120vh;
+      background-image: url("assets/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+      will-change: transform;
+      transition: transform 0.1s ease-out;
     }
 
     @keyframes subtleMove {
@@ -152,7 +157,7 @@
 
   <section class="buttons">
     <a href="https://t.me/nutsuki_sol" target="_blank">✨ Join the Cult</a>
-    <a href="https://twitter.com/NutsukiSOL" target="_blank">🔍 Follow the Signal</a>
+    <a href="https://x.com/nutsuki_sol" target="_blank">🔍 Follow the Signal</a>
   </section>
 </body>
 </html>
