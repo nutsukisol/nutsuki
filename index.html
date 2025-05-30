@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUTSUKI – The Signal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Audiowide', sans-serif;
+      background: #0a0a0a;
+      color: #0ff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .background {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('assets/fondowep.png') no-repeat center center / cover;
+      background-attachment: fixed;
+      background-position: center 0;
+      animation: subtleMove 20s infinite alternate ease-in-out;
+    }
+
+    @keyframes subtleMove {
+      from {
+        background-position-y: 0;
+      }
+      to {
+        background-position-y: 80px;
+      }
+    }
+
+    .neon-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      background: radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 60%),
+                  radial-gradient(circle at 50% 50%, rgba(0, 255, 100, 0.05) 0%, transparent 70%);
+      animation: neonPulse 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes neonPulse {
+      0% {
+        filter: brightness(1) hue-rotate(0deg);
+        transform: scale(1);
+      }
+      50% {
+        filter: brightness(1.2) hue-rotate(20deg);
+        transform: scale(1.02);
+      }
+      100% {
+        filter: brightness(1) hue-rotate(-10deg);
+        transform: scale(1);
+      }
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .nutsuki-visual img {
+      width: 300px;
+      max-width: 100%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 30px #0ff;
+      border-radius: 12px;
+    }
+
+    h1, h2 {
+      text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 1rem auto;
+    }
+
+    .buttons a {
+      display: inline-block;
+      background: #0ff;
+      color: #000;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #0ff, 0 0 60px #0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="neon-overlay"></div>
+
+  <section id="hero">
+    <div class="nutsuki-visual">
+      <img src="assets/nutsuki_main.png" alt="Nutsuki">
+    </div>
+    <h1>She's not the meme.<br>She's the signal.</h1>
+    <p>The story of Nutsuki — carrier of the Acorn of Alpha, exiled from the MetaForest, reborn on Solana.</p>
+    <div class="buttons">
+      <a href="#lore">Read the Lore</a>
+      <a href="#tokenomics">View Tokenomics</a>
+    </div>
+  </section>
+
+  <section id="lore">
+    <h2>NUTSUKI — The Spark</h2>
+    <p>It didn’t start with a meme.<br>Or a pump.<br>...</p>
+  </section>
+
+  <section id="tokenomics">
+    <h2>📊 Tokenomics</h2>
+    <p>
+      Total Supply: 1,000,000,000 NUTS<br>
+      — 95% Liquidity<br>
+      — 5% CEX listings, airdrops & cult rewards<br>
+      No presale. No taxes. Only alpha.
+    </p>
+  </section>
+
+  <section class="buttons">
+    <a href="https://t.me/nutsuki_sol" target="_blank">✨ Join the Cult</a>
+    <a href="https://twitter.com/NutsukiSOL" target="_blank">🔍 Follow the Signal</a>
+  </section>
+</body>
+</html>
