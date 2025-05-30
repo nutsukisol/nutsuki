@@ -16,24 +16,24 @@
     }
 
     .background {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: url('assets/fondowep.png') no-repeat center center / cover;
-  background-attachment: fixed;
-  background-position: center 0;
-  animation: subtleMove 20s infinite alternate ease-in-out;
-}
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('fondowep.png') no-repeat center center / cover;
+      background-attachment: fixed;
+      background-position: center 0;
+      animation: subtleMove 20s infinite alternate ease-in-out;
+    }
 
-@keyframes subtleMove {
-  from {
-    background-position-y: 0;
-  }
-  to {
-    background-position-y: 40px;
-  }
-}
-
+    @keyframes subtleMove {
+      from {
+        background-position-y: 0;
+      }
+      to {
+        background-position-y: 40px;
+      }
+    }
 
     .neon-overlay {
       position: fixed;
@@ -50,18 +50,9 @@
     }
 
     @keyframes neonPulse {
-      0% {
-        filter: brightness(1) hue-rotate(0deg);
-        transform: scale(1);
-      }
-      50% {
-        filter: brightness(1.2) hue-rotate(20deg);
-        transform: scale(1.02);
-      }
-      100% {
-        filter: brightness(1) hue-rotate(-10deg);
-        transform: scale(1);
-      }
+      0% { filter: brightness(1) hue-rotate(0deg); transform: scale(1); }
+      50% { filter: brightness(1.2) hue-rotate(20deg); transform: scale(1.02); }
+      100% { filter: brightness(1) hue-rotate(-10deg); transform: scale(1); }
     }
 
     section {
@@ -78,7 +69,6 @@
       justify-content: center;
       align-items: center;
       padding: 2rem;
-      text-align: center;
     }
 
     h1, h2 {
@@ -109,6 +99,25 @@
       transform: scale(1.05);
       box-shadow: 0 0 30px #0ff, 0 0 60px #0ff;
     }
+
+    .nutsuki-visual {
+      max-width: 350px;
+      margin: 2rem auto;
+      animation: floatY 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 15px #0ff) drop-shadow(0 0 25px #00f);
+    }
+
+    .nutsuki-visual img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    @keyframes floatY {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -118,6 +127,11 @@
   <section id="hero">
     <h1>She's not the meme.<br>She's the signal.</h1>
     <p>The story of Nutsuki — carrier of the Acorn of Alpha, exiled from the MetaForest, reborn on Solana.</p>
+
+    <div class="nutsuki-visual">
+      <img src="nutsuki_main.png" alt="Nutsuki">
+    </div>
+
     <div class="buttons">
       <a href="#lore">Read the Lore</a>
       <a href="#tokenomics">View Tokenomics</a>
@@ -194,12 +208,14 @@
     <a href="https://t.me/nutsuki_sol" target="_blank">✨ Join the Cult</a>
     <a href="https://twitter.com/NutsukiSOL" target="_blank">🔍 Follow the Signal</a>
   </section>
+
   <script>
-    const bg = document.getElementById('bg');
+    const bg = document.querySelector('.background');
     window.addEventListener('scroll', () => {
-      const offset = window.scrollY * 0.3;
-      bg.style.transform = `translateY(${offset}px)`;
+      const offset = window.scrollY * 0.5;
+      bg.style.backgroundPositionY = `${offset}px`;
     });
   </script>
 </body>
 </html>
+
