@@ -3,113 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NUTSUKI - Solana's Otaku Squirrel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <title>NUTSUKI – The Signal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
-      color: #fff;
+      font-family: 'Audiowide', system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #0ff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
-    header {
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #00ffd0;
-    }
-    .hero-img {
-      max-width: 300px;
-      border-radius: 1rem;
-    }
-    .section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #ff00ff;
-      font-size: 2rem;
-    }
-    .section p, ul {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .tokenomics-table {
+
+    .background {
+      position: fixed;
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
+      height: 100%;
+      z-index: -1;
+      background: radial-gradient(ellipse at bottom, #0a0a0a 0%, #050505 100%);
     }
-    .tokenomics-table th, .tokenomics-table td {
-      border: 1px solid #444;
-      padding: 1rem;
-      text-align: left;
+
+    .glow-grid {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: pulse 2s infinite ease-in-out;
     }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.03; }
+      50% { opacity: 0.1; }
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1, h2 {
+      text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 1rem auto;
+    }
+
     .buttons a {
       display: inline-block;
-      margin: 1rem 1rem 0 0;
-      padding: 0.75rem 1.5rem;
-      background: #00ffd0;
+      background: #0ff;
       color: #000;
-      border-radius: 0.5rem;
       text-decoration: none;
+      padding: 1rem 2rem;
+      margin: 1rem;
       font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      transition: 0.3s;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #888;
+
+    .buttons a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #0ff, 0 0 60px #0ff;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="banner_placeholder.jpg" alt="Nutsuki Banner" class="hero-img">
-    <h1>$NUTS - Solana's Otaku Squirrel</h1>
+  <div class="background">
+    <div class="glow-grid"></div>
+  </div>
+
+  <section id="hero">
+    <h1>She's not the meme.<br>She's the signal.</h1>
+    <p>The story of Nutsuki — carrier of the Acorn of Alpha, exiled from the MetaForest, reborn on Solana.</p>
     <div class="buttons">
-      <a href="#buy">Buy on Jupiter</a>
-      <a href="#telegram">Join Telegram</a>
-      <a href="#dex">View on Dexscreener</a>
+      <a href="#lore">Read the Lore</a>
+      <a href="#tokenomics">View Tokenomics</a>
     </div>
-  </header>
+  </section>
 
-  <div class="section" id="lore">
-    <h2>🧠 The Lore</h2>
-    <p>Exiled from the forest for consuming too much hopium, Nutsuki now roams the Solana blockchain in search of green candles and anime degenerates. She trades, she memes, she moons. And she does it all powered by a glowing acorn of alpha.</p>
-  </div>
+  <section id="lore">
+    <h2>NUTSUKI — The Spark</h2>
+    <p>
+      It didn’t start with a meme.<br>
+      Or a pump.<br>
+      It began with a spark — hidden deep in the MetaForest,<br>
+      where the leaves hum with old block data,<br>
+      and squirrels still chase useless JPEGs.<br><br>
 
-  <div class="section" id="tokenomics">
+      But she was different.<br>
+      Her name was Nutsuki.<br><br>
+
+      While others hoarded acorns,<br>
+      she collected signals.<br><br>
+
+      They stacked food for winter.<br>
+      She stacked hopium.<br><br>
+
+      But Nutsuki wasn’t born in that forest.<br>
+      She wasn’t even born.<br>
+      She crash-uploaded — a data anomaly wrapped in fur.<br><br>
+
+      All she remembers is:<br>
+      A glowing acorn pulsing with liquidity<br>
+      A whisper: "Buy the fear..."<br>
+      And a chart… that never stopped going up<br><br>
+
+      Each night, she stared into her cold wallet.<br>
+      Each morning, she trained:<br>
+      Tree-to-tree scalps<br>
+      High-leverage jumps<br>
+      Volume sniping in silence<br><br>
+
+      They called her crazy.<br>
+      They called her a meme.<br>
+      They said she’d get rugged.<br><br>
+
+      But she just whispered:<br>
+      “They laughed at Doge too.”<br><br>
+
+      Now she runs through Solana —<br>
+      faster than MEV, sharper than slippage.<br><br>
+
+      She carries the Acorn of Alpha,<br>
+      and behind her follows a cult of<br>
+      traders, gamblers, and true believers.<br><br>
+
+      They say she’s dangerous.<br>
+      They say she’s just another shitcoin.<br><br>
+
+      But Nutsuki knows the truth:<br>
+      She isn’t the meme.<br>
+      She’s the signal.
+    </p>
+  </section>
+
+  <section id="tokenomics">
     <h2>📊 Tokenomics</h2>
-    <table class="tokenomics-table">
-      <tr><th>Category</th><th>Allocation</th><th>Description</th></tr>
-      <tr><td>Liquidity (Pump.fun)</td><td>95%</td><td>Fair launch, no presale</td></tr>
-      <tr><td>Marketing</td><td>3%</td><td>Shitposting, memes, raids</td></tr>
-      <tr><td>Airdrops</td><td>1%</td><td>Giveaways and early supporters</td></tr>
-      <tr><td>Treasury</td><td>1%</td><td>Degenerate treasury</td></tr>
-    </table>
-  </div>
+    <p>
+      Total Supply: 1,000,000,000 NUTS<br>
+      — 95% Liquidity<br>
+      — 5% CEX listings, airdrops & cult rewards<br>
+      No presale. No taxes. Only alpha.
+    </p>
+  </section>
 
-  <div class="section" id="roadmap">
-    <h2>🚀 Roadmap</h2>
-    <ul>
-      <li>✅ Phase 1: Survive launch</li>
-      <li>✅ Phase 2: Get listed on DexScreener</li>
-      <li>🔜 Phase 3: $NUTS trending on Twitter</li>
-      <li>🔜 Phase 4: Waifu NFT collection</li>
-      <li>🛸 Phase 5: Nutsuki anime pilot (?)</li>
-    </ul>
-  </div>
-
-  <div class="section" id="gallery">
-    <h2>🎨 Gallery</h2>
-    <p>Coming soon: Community art and AI-generated meme content</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Nutsuki. Made by degens, for degens. Solana strong.</p>
-  </footer>
+  <section class="buttons">
+    <a href="https://t.me/nutsuki_sol" target="_blank">✨ Join the Cult</a>
+    <a href="https://twitter.com/NutsukiSOL" target="_blank">🔍 Follow the Signal</a>
+  </section>
 </body>
 </html>
